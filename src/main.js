@@ -30,14 +30,10 @@ try {
 
 }
 
-function shuffleArray(array) {
-  // Algorithme de mélange de Fisher-Yates
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+// Fonction displayPhoto (Affichage d'une photo) :
+// Cette fonction prend un indice en argument et utilise la fonction fetchPhotos pour obtenir la liste des photos.
+// Elle vérifie si l'indice est valide, puis crée un élément image (<img>) avec la source (src) de la photo à l'indice spécifié.
+// Elle efface tout le contenu précédent de la galerie d'images (photoGallery) et ajoute le nouvel élément image.
 
 async function displayPhoto(index) {
   const photoGallery = document.getElementById('photoGallery');
@@ -57,6 +53,13 @@ async function displayPhoto(index) {
   photoGallery.appendChild(imgElement);
 }
 
+
+
+
+// Fonction nextPhoto (Affichage de la photo suivante) :
+// Cette fonction incrémente l'indice actuel et appelle la fonction displayPhoto pour afficher la photo suivante. 
+// Si l'indice dépasse la longueur des photos, il revient à zéro pour afficher la première photo.
+
 async function nextPhoto() {
   currentIndex++;
   const photos = await fetchPhotos();
@@ -67,6 +70,14 @@ async function nextPhoto() {
 
   displayPhoto(currentIndex);
 }
+
+
+// Événement "DOMContentLoaded" :
+// L'événement DOMContentLoaded est utilisé pour s'assurer que le script est exécuté après
+// le chargement complet du DOM. Lors de cet événement, la première photo est affichée initialement, et
+// un gestionnaire d'événement est ajouté au bouton ayant l'ID nextButton. Lorsque ce bouton est cliqué, 
+// la fonction nextPhoto est appelée pour afficher la photo suivante.
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Afficher la première photo lors du chargement initial
