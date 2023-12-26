@@ -49,11 +49,11 @@ async function displayPhoto(index) {
   }
 
   const imgElement = document.createElement('img');
+  imgElement.classList.add('img-small'); // Ajoutez la classe pour les images
   imgElement.src = photos[index].urls.regular;
   imgElement.alt = photos[index].alt_description;
 
-  // Effacer le contenu précédent
-  photoGallery.innerHTML = '';
+  photoGallery.innerHTML = ''; // Effacer le contenu précédent
   photoGallery.appendChild(imgElement);
 }
 

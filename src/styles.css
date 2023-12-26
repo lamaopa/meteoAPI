@@ -1,0 +1,10 @@
+/* styles.css */
+
+/* Ajoutez une classe pour les images */
+.img-small {
+    max-width: 300px; /* Définissez la largeur maximale souhaitée */
+    max-height: 200px; /* Définissez la hauteur maximale souhaitée */
+    width: auto; /* Permet à la largeur de s'ajuster automatiquement en fonction de la hauteur */
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
+  }
+  
