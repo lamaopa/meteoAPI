@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Viewer</title>
+  <title>API test</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello</h1>
-  <label for="myText">Username:</label>
-  <input id="myText">
-  <button id="mySubmit">Submit</button>
 
-  <h1>Photo Viewer</h1>
-  <div id="photoGallery"></div>
-  <button id="nextButton">Next Photo</button>
+  <div class="weatherForm">
+    <input type="text" class="cityInput" placeholder="Enter city">
+    <button type="submit"> Get weather</button>
+  </div>
+ 
+
+<div class="card">
+  <h1 class="cityDisplay"> Miami</h1>
+  <p class="tempDisplay">31°C</p>
+  <p class="humidityDisplay">Humidity : 60%</p>
+  <p class="descDisplay"> Clear skies</p>
+  <p class="weatherEmoji">☀️</p>
+  <p class="errorDisplay">Please enter the city</p>
+</div>
 
   <script src="main.js"></script>
 </body>
