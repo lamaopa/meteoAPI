@@ -41,6 +41,7 @@ button[type="submit"]:hover{
 .card{
   background: linear-gradient(0deg, rgba(115,191,140,1) 38%, rgba(253,187,45,1) 100%);
   padding: 50px;
+  border-radius: 10px;
   box-shadow: 2px 2px 5px hsl(0,0%,0%,0.5);
   min-width: 300px;
   display: flex;
@@ -80,4 +81,9 @@ p{
 .weatherEmoji{
   margin: 0;
   font-size: 7rem;
+}
+
+.errorDisplay{
+  font-size: 2.5rem;
+  font-weight: bold;
 }
